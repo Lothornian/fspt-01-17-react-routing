@@ -25,8 +25,16 @@ export default class Home extends Component {
 
     return (
       <div>
-        <h1>{this.state.pokemon.name}</h1>
-        <input type="text" defaultValue={this.state.id} onChange={e => this.getPokemonById(e.target.value)} />
+        <div>
+          <h1>{this.state.pokemon.name}</h1>
+          <input type="text" defaultValue={this.state.id} onChange={e => this.getPokemonById(e.target.value)} />
+        </div>
+        <div>
+          <h1>Home</h1>
+          <p>Did you mean to go <a href='/'>Home</a>?</p>
+          <p>Or to the <a href='/NotFound'>Not found page</a>?</p>
+          <p>Or maybe you want to go <a href='/away'>away</a>?</p>
+        </div>
       </div>
     )
   }
